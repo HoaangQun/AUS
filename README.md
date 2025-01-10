@@ -1,5 +1,6 @@
 # AUS
 arch setup for beginner
+
 cài đặt bộ gõ và trình hỗ trợ từ AUR cho wayland/gnome
 
 nếu bạn chưa có Arch/if you want to install Arch

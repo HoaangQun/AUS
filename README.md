@@ -5,28 +5,47 @@ nếu bạn chưa có Arch/if you want to install Arch
 downloads iso from offical website:
 
 https://archlinux.org/download/
+
 I advise you download US link
 
 use Ventoy/Rufus/Balena Etcher to creat a USB boot drive
+
 Ventoy: https://www.ventoy.net/en/download.html
+
 Etcher: https://etcher.balena.io/#download-etcher
+
 Rufus:  https://rufus.ie/en/#google_vignette
 
 reboot your pc
 
 #Install
+
 iwctl
+
 device list
+
 station <devide_name> get-networks
+
 station <device_name> connect "Wifi_name"
+
 <password>
+
 exit
+
 ping google.com
+
 Ctrl + C
+
 lsblk
+
 gdisk /dev/sd<X>
+
 archinstall
 
+
+
 sudo pacman -Syu
+
 exit
+
 reboot now

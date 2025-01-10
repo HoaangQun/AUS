@@ -1,7 +1,9 @@
 # AUS
 arch setup for beginner
 cài đặt bộ gõ và trình hỗ trợ từ AUR cho wayland/gnome
+
 nếu bạn chưa có Arch/if you want to install Arch
+
 downloads iso from offical website:
 
 https://archlinux.org/download/
@@ -18,7 +20,7 @@ Rufus:  https://rufus.ie/en/#google_vignette
 
 reboot your pc
 
-#Install
+# Install
 
 iwctl
 
@@ -28,7 +30,9 @@ station <devide_name> get-networks
 
 station <device_name> connect "Wifi_name"
 
-<password>
+
+: "press password"
+
 
 exit
 
@@ -38,7 +42,7 @@ Ctrl + C
 
 lsblk
 
-gdisk /dev/sd<X>
+gdisk /dev/sda (sdb)
 
 archinstall
 

@@ -1,5 +1,5 @@
 # AUS
-arch setup for beginner
+arch setup for beginners
 
 cài đặt bộ gõ và trình hỗ trợ từ AUR cho wayland/gnome
 

@@ -1,0 +1,60 @@
+#install fcitx5 and fcitx5-bamboo
+#pacman package
+
+sudo pacman -S fcitx5 fcitx5-bamboo fcitx5-configtool fcitx5-qt fcitx5-gtk
+sudo pacman -S fcitx5 fcitx5-bamboo fcitx5-gtk fcitx5-qt fcitx5-configtool fcitx5-module-wayland
+
+
+#or from AUR (yay)
+
+yay -S fcitx5-bamboo
+
+## install yay
+sudo pacman -Syu
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg -si
+## check version yay
+yay --version
+## install/uninstall package by yay
+yay -S <package name>
+yay -Rns <package name>
+
+#fcitx5 config
+fcitx5-configtool
+
+#setup input method if you use wayland
+#config ~/.pam_enviroment
+GTK_IM_MODULE DEFAULT=fcitx5
+QT_IM_MODULE DEFAULT=fcitx5
+XMODIFIERS DEFAULT=@im=fcitx5
+INPUT_METHOD DEFAULT=fcitx5
+SDL_IM_MODULE DEFAULT=fcitx5
+
+
+#if you use hyprland
+#add config to ~/hyprland.conf
+#input method
+#setup
+exec-once = export GTK_IM_MODULE=fcitx5
+exec-once = export QT_IM_MODULE=fcitx5
+exec-once = export XMODIFIERS=@im=fcitx5
+exec-once = export INPUT_METHOD=fcitx5
+exec-once = export SDL_IM_MODULE=fcitx5
+
+#auto start
+exec-once = fcitx5
+
+#creat auto start file:
+nano ~/.config/autostart/fcitx5.desktop
+[Desktop Entry]
+Type=Application
+Exec=fcitx5
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=Fcitx5
+Comment=Bộ gõ Fcitx5
+
+#run
+fcitx5 &

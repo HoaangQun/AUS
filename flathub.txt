@@ -1,0 +1,6 @@
+#install platpak package manager
+sudo pacman -Syyu
+sudo pacman -S flatpak
+
+#check
+platpak --version

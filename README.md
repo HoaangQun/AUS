@@ -22,35 +22,3 @@ Rufus:  https://rufus.ie/en/#google_vignette
 reboot your pc
 
 # Install
-
-iwctl
-
-device list
-
-station <devide_name> get-networks
-
-station <device_name> connect "Wifi_name"
-
-
-: "press password"
-
-
-exit
-
-ping google.com
-
-Ctrl + C
-
-lsblk
-
-gdisk /dev/sda (sdb)
-
-archinstall
-
-
-
-sudo pacman -Syu
-
-exit
-
-reboot now

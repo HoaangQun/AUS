@@ -9,7 +9,7 @@ downloads iso from offical website:
 
 https://archlinux.org/download/
 
-I advise you download US link
+I recommend downloading the US link
 
 use Ventoy/Rufus/Balena Etcher to creat a USB boot drive
 

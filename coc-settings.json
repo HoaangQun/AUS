@@ -1,0 +1,29 @@
+{
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    },
+    "pyright": {
+      "command": "pyright-langserver",
+      "args": ["--stdio"],
+      "filetypes": ["python"],
+      "rootPatterns": [".git", "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt"],
+      "settings": {
+        "python": {
+          "analysis": {
+            "autoSearchPaths": true,
+            "useLibraryCodeForTypes": true
+          }
+        }
+      }
+    }
+  }
+}
+

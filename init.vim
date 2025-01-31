@@ -11,7 +11,7 @@
 " 	|  |     |  |    |  |     |  |    |  |_____|  |   |  |_____|  |   |  |   \ |  |    |  |     |  |         |  |    \  \|    |  |      |  |   |  |   \ |  |    
 " 	|  |     |  |     |  |___|  |     |  |     |  |   |  |     |  |   |  |    \|  |     |  |___|  |           |  |___|\  \     |  |____|  |    |  |    \|  |
 " 	|  |     |  |      |       |      |  |     |  |   |  |     |  |   |  |     |  |      |       |             |       \  \     |        |     |  |     |  | 
-"        --       --        -------       ----     ----    --       --     --       --        -------               ------  ---      --------       --       -- 
+"        --       --        -------       ----     ----    --       --     --       --        -------               ------  ---      --------       --       --
 "
 "
 "
@@ -301,16 +301,16 @@ let g:fzf_colors = {
 " :Files
 "command! -bang -nargs=? -complete=dir Files
 "    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'bat --color=always --theme=TwoDark --style=header,numbers,snip --line-range :300 {}']}, <bang>0)
+
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
-map <F6> :Files<CR>
+nnoremap <silent> <F6> :Files<CR>
 
 " :Rg
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --color=always --smart-case -- '.shellescape(<q-args>), 1, {'options': ['--exact', '--layout=reverse']}, <bang>0)
-map <F7> :Rg<CR>
-
+nnoremap <silent> <F7> :Rg<CR>
 " Ignore some file 
 let $FZF_DEFAULT_COMMAND='find . \( -name __pycache__ -o -name .git -name .vagrant \) -prune -o -print'
 
@@ -318,29 +318,42 @@ set number
 
 " Vim color
 let g:onedark_config = {
-    \ 'style': 'warmer',
+    \ 'style': 'darker',
 \}
 colorscheme onedark
 
-map <silent> <F5> :NERDTreeToggle<CR>
+nnoremap <silent> <F5> :NERDTreeToggle<CR>
 
 let g:floaterm_position = 'topright'
-let g:floaterm_width = 0.6
-let g:floaterm_height = 0.8
+let g:floaterm_width = 0.57
+let g:floaterm_height = 0.75
 let g:floaterm_title = 'Terminal $1/$2'
 let g:floaterm_wintype = 'float'
 let g:floaterm_rootmarkers = ['.pro']
 
 nnoremap <silent> <F8> :FloatermToggle!<CR>
+
 tnoremap <silent> <F8> <C-\><C-n>:FloatermToggle!<CR>
 
-nnoremap <silent> <F2> :q!
+nnoremap <silent> <F2> :q!<CR>
 
-nnoremap <silent> <F3> :w!
+nnoremap <silent> <F3> :w!<CR>
 
-nnoremap <silent> <F4> :wq!
+nnoremap <silent> <F4> :wq!<CR>
 
-nmap g gg
+vnoremap c y<CR>
+
+nnoremap c yy<CR>
+
+nnoremap d d<CR>
+
+nnoremap n P<CR>
+
+nnoremap q :bd<CR>
+
+nmap g gg<CR>
+
+nmap u u<CR>
 
 set shortmess+=I
 
